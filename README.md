@@ -117,6 +117,18 @@ After the model is trained, inference can be generated using the following comma
 ```
 python generate_inference.py
 ```
+Understand that source language is English and target translation is spanish.
+
+```
+Trained model loaded...
+Enter the text: I love you
+Predicted Translation: te amo
+
+
+Enter the text: I love my country
+Predicted Translation: amo a mi país
+```
+
 Below are the attention maps for the spanish translation of the english sentence "i love you".
 
 <img src="images\attention_head_8.jpg" width="400" height = "300">
