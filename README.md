@@ -116,4 +116,4 @@ python generate_inference.py
 ```
 Below are the attention maps for the spanish translation of the english sentence "i love you".
 
-<img src="images\attention_head_8.png" width="300" height = "300">
+<img src="images\attention_head_8.jpg" width="300" height = "300">
