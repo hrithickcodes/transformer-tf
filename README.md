@@ -15,6 +15,10 @@ git clone https://github.com/TheTensorDude/Transformer-TF2.x.git
 cd Transformer-TF2.x
 pip install -r requirements.txt
 ```
+### Download the pretrained model and tokenizers
+The model was pretrained using english-to-spanish dataset. Please download the files from this [here](https://drive.google.com/drive/folders/1XzAF6iUDJbRaIMfZb9rDiI1mEADpLAs9?usp=share_link)
+and put the weights inside
+the model folder. 
 
 ### Training the Transformer :metal:
 Before training the hyperparameters need to be set in the config.json file.
@@ -136,3 +140,4 @@ Below are the attention maps for the spanish translation of the english sentence
 ### Notes
 - If the value of approximate_source_tokens is less than the actual number of token then the loss becomes nan.
 - The dropout_training key should be false while generating inference.
+- the model was trained using white-space tokenizer.
