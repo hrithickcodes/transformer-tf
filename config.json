@@ -1,0 +1,35 @@
+{
+    "model_architecture" : {
+        "token_embedding_dimension" : 128,
+        "number_of_attention_heads" : 8,
+        "number_of_layers" : 2,
+        "ffn_units" : 512,
+        "max_sentence_length" : 70,
+        "dropout_rate" : 0.3
+    },
+    "training_settings" : {
+        "batch_size" : 128,
+        "epochs" : 70,
+        "test_size" : 0.2,
+        "warmup_steps" : 4000,
+        "generate_training_stats" : true,
+        "plot_training_stats" : false,
+        "training_stats_save_dir" : "runs",
+        "layernorm_epsilon_value" : 1e-6,
+        "dropout_training" : true  
+    },
+    "data" : {
+        "data_path" : "data//Translation//spa.txt",
+        "approximate_source_tokens" : null,
+        "approximate_target_tokens" : null
+    },
+    "save_paths" : {
+        "model_save_path" : "model/english-to-spanish-ckpt",
+        "source_tokenizers_save_path" : "model//english_tokenizer",
+        "target_tokenizers_save_path" : "model//spanish_tokenizer"
+    },
+    "inference_settings" : {
+        "visualise_attention_layer" : "decoder_layer_cross_attention_2",
+        "attention_plot_save_dir" : "runs/exp"
+    }
+}
