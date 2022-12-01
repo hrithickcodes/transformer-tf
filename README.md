@@ -1,8 +1,10 @@
-## Attention Is All You Need Implementation (TensorFlow 2.x)
+## Attention Is All You Need Implementation (TensorFlow 2.x) 🚀
 
 This repository contains the TensorFlow implementation of the paper (:link: [Attention Is All You Need](https://arxiv.org/abs/1706.03762)). Transformers are the new SOTA, not only in Natural Language Processing but also in Vision.This implementation can be used to perform any sequence to sequence task with some minimal code changes. 
 
-<img src="images\transformer_picture.png" width="400" height = "350">
+<div align="center">
+    <img src="images\transformer_picture.png" width="400" height = "350">
+</div>
 
 ### Setup
 Tensorflow GPU is necessary for fast training and inference. All the dependencies can be installed using the following
@@ -14,7 +16,7 @@ cd Transformer-TF2.x
 pip install -r requirements.txt
 ```
 
-### Training the Transformer 
+### Training the Transformer :metal:
 Before training the hyperparameters need to be set in the config.json file.
 
 ```json 
@@ -107,7 +109,8 @@ class CustomLRForAdam(tf.keras.optimizers.schedules.LearningRateSchedule):
 ```
 Below is the plot of the learning rate and the training steps.
 
-<img src="runs\learning_rate.png" width="500" height = "400">
+<img src="runs\learning_rate.png" width="300" height = "200">
+
 
 ### Inference and Attention maps
 After the model is trained, inference can be generated using the following command.
@@ -117,3 +120,7 @@ python generate_inference.py
 Below are the attention maps for the spanish translation of the english sentence "i love you".
 
 <img src="images\attention_head_8.jpg" width="400" height = "300">
+
+### Notes
+- If the value of approximate_source_tokens is less than the actual number of token then the loss becomes nan.
+- The dropout_training key should be false while generating inference.
