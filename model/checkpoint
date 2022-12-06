@@ -1,0 +1,2 @@
+model_checkpoint_path: "english-to-spanish-ckpt"
+all_model_checkpoint_paths: "english-to-spanish-ckpt"
